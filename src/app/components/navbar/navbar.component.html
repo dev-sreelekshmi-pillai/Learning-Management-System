@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid nav-items">
+    <a class="" href="#">
+      <img
+        src="../../../assets/lms-logo"
+        alt="LMS Logo"
+        routerLink="/home"
+        routerLinkActive="active"
+        class="image-logo"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarText"
+      aria-controls="navbarText"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <a
+        routerLink="/courses"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Categories</a
+      >
+      <div class="searchbutton input-group">
+        <input
+          class="form-control"
+          placeholder="Search Courses"
+          aria-label="Search Courses"
+          aria-describedby="search-cources"
+          type="text"
+          name="searchcourse"
+          id="searchcourse"
+        />
+        <button
+          class="btn btn btn-outline-secondary"
+          type="button"
+          name="search"
+          id="search"
+        >
+          Search
+        </button>
+      </div>
+
+      <ul class="nav-list-items ms-auto mb-2 mb-lg-0 navbar-nav">
+        <li class="nav-item">
+          <a href="">Plans/Pricing</a>
+        </li>
+        <!-- <li class="nav-item"><a href="">About Us</a></li> -->
+        <li class="nav-item">
+          <a
+            routerLink="/login"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/register"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Sign Up</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

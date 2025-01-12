@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font: sans-serif;
+    overflow-x: hidden;
+}
+
+/*-----------------------------------------------Navbar------------------------------------------------- */
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(47, 131, 205);
+}
+
+.image-logo {
+    width: 30px;
+    height: 24px;
+}
+
+.nav-list-items {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list-items li {
+    padding: 10px;
+    /* margin: 10px; */
+    align-self: center;
+}
+
+#search-cources {
+    height: 35px;
+    min-width: 20rem;
+}
+
+.right {
+    float: right;
+}
+
+
+/*-----------------------------------------------Navbar------------------------------------------------- */

@@ -1,0 +1,41 @@
+.wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 0;
+    background-color: #fbfada;
+}
+
+.page-footer,
+.page-header {}
+
+.page-body {
+    background-color: #fbfada;
+}
+
+@media screen and (max-width: 770px) {
+    /* .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-footer,
+    .page-header {
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .page-body {
+        flex-grow: 1;
+    } */
+
+    .page-footer {
+        /* position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: auto; */
+
+    }
+}
+
+@media screen {}

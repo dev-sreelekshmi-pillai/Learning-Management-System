@@ -1,0 +1,57 @@
+<div class="signup-wrapper">
+  <div class="form-set">
+    <h3 class="mb-4">Sign up and start learning</h3>
+    <form action="">
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="form-control"
+          placeholder="name@example.com"
+        />
+        <label for="name">Full Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          name="email-id"
+          id="emailId"
+          class="form-control"
+          placeholder="name@example.com"
+        />
+        <label for="emailId">Email Address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+          placeholder="name@example.com"
+        />
+        <label for="name">Password</label>
+      </div>
+
+      <div>
+        <button type="submit" class="btn sign-btn">Sign up</button>
+      </div>
+    </form>
+    <p>
+      <small
+        >By signing up, you agree to our Terms of Use and Privacy Policy.</small
+      >
+    </p>
+    <div class="arrange">
+      <p>
+        Already have an account?
+        <a
+          routerLink="/login"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          ><strong>Log in</strong>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
