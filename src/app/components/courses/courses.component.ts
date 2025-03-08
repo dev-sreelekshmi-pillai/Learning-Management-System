@@ -2,11 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { CourseService } from '../../services/course.service';
 import { HttpClientModule } from '@angular/common/http';
 import { course } from '../../models/course.model';
+import { SlicePipe } from '@angular/common';
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [HttpClientModule],
+  imports: [HttpClientModule, SlicePipe],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css'
 })
@@ -20,9 +21,9 @@ export class CoursesComponent implements OnInit {
   }
 
   getCourses() {
-    this.courseService.getAllCourses().subscribe((data) => {
-      this.courseList = data
-      console.log(JSON.stringify(data));
+    this.courseService.getAllCourses().subscribe((response) => {
+      this.courseList = response.data
+      console.log(JSON.stringify(response));
     })
   }
 

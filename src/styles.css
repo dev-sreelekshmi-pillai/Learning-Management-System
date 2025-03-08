@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Lato:wght@400;700&display=swap");
 
 * {
     margin: 0;
@@ -11,23 +12,25 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
+    height: 100vh;
+    /* Full height of viewport */
+    display: flex;
+    flex-direction: column;
     font: sans-serif;
     overflow-x: hidden;
 }
 
-/*-----------------------------------------------Navbar------------------------------------------------- */
-
-.nav-items {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 10vh;
-    background-color: rgb(47, 131, 205);
+:root {
+    --charcoal:
 }
 
+/*-----------------------------------------------Navbar------------------------------------------------- */
+
 .image-logo {
-    width: 30px;
-    height: 24px;
+    width: 3.2rem;
+    height: 2.2rem;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
 .nav-list-items {
@@ -52,3 +55,267 @@ body {
 
 
 /*-----------------------------------------------Navbar------------------------------------------------- */
+
+/* ----------------------------------------------Login and Sign up---------------------------------------------- */
+
+.signup-wrapper {
+    /* margin: 3rem auto; */
+    background-image: url(/assets/bg-image-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4rem;
+}
+
+.form-set {
+    justify-items: center;
+    margin: auto auto auto 50px;
+    width: 52%;
+    color: rgb(46, 6, 6);
+}
+
+
+@media screen and (max-width : 650px) {
+
+    .signup-wrapper {
+        width: 92vw;
+        height: 80vh;
+        justify-content: center;
+    }
+
+    .image-logo {
+        width: 50px;
+        height: 32px;
+    }
+
+    .form-set {
+        padding: 30px;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1200px) {
+    .signup-wrapper {
+        width: 85vw;
+    }
+
+    .form-set {
+        width: 50vw;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:1000px) and (min-height: 1000px) {
+    .signup-wrapper {
+        height: 60vh;
+    }
+
+    /* .form-set {
+        margin: auto;
+
+    } */
+}
+
+@media screen and (max-height: 600px) {
+    .signup-wrapper {
+        height: 80vh;
+    }
+
+    .form {}
+}
+
+@media screen and (min-width: 1200px) {
+    .signup-wrapper {
+        justify-content: center;
+        width: 85vw;
+    }
+}
+
+/* ----------------------------------------------Login and Sign up---------------------------------------------- */
+
+/*-----------------------------------------------Udemy cource Sytyles------------------------------------------------- */
+
+body {
+    margin: 0;
+    font-family: "Lato", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(#d0d6d9, #b1b4ba);
+    color: #d9e2f1;
+    min-height: 100vh;
+}
+
+header {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+header img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #758a8a;
+    filter: drop-shadow(0 0 4px rgba(31, 42, 42, 0.5));
+}
+
+header h1 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 1rem 0;
+    letter-spacing: 0.2rem;
+    color: #2f4444;
+}
+
+form {
+    width: 90%;
+    max-width: 40rem;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: linear-gradient(180deg, #253c3c, #1d4949);
+    border-radius: 8px;
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
+}
+
+.control,
+fieldset {
+    margin: 0.5rem 0;
+}
+
+.control.no-margin {
+    margin-bottom: 0;
+}
+
+.control label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+    color: #9bafaf;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.control input {
+    display: block;
+    width: 100%;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #758a8a;
+    background-color: #869999;
+    color: #142020;
+}
+
+.control select {
+    display: block;
+    width: 100%;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #758a8a;
+    background-color: #869999;
+    color: #142020;
+}
+
+.control:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+}
+
+.control:has(input[type="checkbox"]) label {
+    margin: 0;
+}
+
+.control input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    max-width: none;
+    margin-right: 0.5rem;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    color: #d9e2f1;
+}
+
+.control-error {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    color: #ffca99;
+    height: 0.5rem;
+    padding: 0.25rem 0 0 0;
+    height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.control-error p {
+    margin: 0;
+}
+
+.control-row {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.control-row .control {
+    flex: 1;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border: 1px solid #147b73;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #147b73;
+    color: #d9e2f1;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #319890;
+}
+
+.button-flat {
+    background-color: transparent;
+    color: #9cbaba;
+}
+
+.button-flat:hover,
+.button-flat:focus {
+    background-color: transparent;
+    color: #869999;
+}
+
+[formgroupname].ng-invalid.ng-touched.ng-dirty label,
+.control:has(.ng-invalid.ng-touched.ng-dirty) label {
+    color: #f98b75;
+}
+
+[formgroupname].ng-invalid.ng-touched.ng-dirty input,
+input.ng-invalid.ng-touched.ng-dirty {
+    background-color: #fbdcd6;
+    border-color: #f84e2c;
+}

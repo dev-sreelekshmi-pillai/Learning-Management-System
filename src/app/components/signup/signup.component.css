@@ -1,37 +1,12 @@
-.signup-wrapper {
-    background-image: url(/assets/bg-image-2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 93%;
-    max-width: 97%;
-    margin: 23px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10rem;
-}
-
-.form-set {
-    align-items: center;
-    width: 25rem;
-    margin: 10px;
-    position: relative;
-    top: 5rem;
-    left: 10rem;
-    color: rgb(46, 6, 6);
-}
-
 .sign-btn {
     width: 100%;
     background-color: #cab2ae;
-    ;
     padding: 8px;
     color: rgb(125, 92, 103)
 }
 
 .sign-btn:hover {
     background-color: #b39f9e;
-    ;
     color: rgb(97, 66, 76);
 }
 
@@ -48,4 +23,16 @@ label {
 
 a {
     color: darkblue;
+}
+
+.whole {
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+}
+
+@media screen and (max-height: 600px) {
+    form {
+        margin: auto;
+    }
 }

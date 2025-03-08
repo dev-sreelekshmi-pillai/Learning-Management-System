@@ -1,17 +1,17 @@
 <div class="container-fluid text-center wrapper">
-  <div class="row">
+  <div class="row header-footer-align">
     <div class="col">
-      <app-navbar class="page-header" />
+      <app-navbar />
     </div>
   </div>
-  <div class="row">
-    <div class="col">
-      <router-outlet class="page-body"></router-outlet>
+  <div class="row page-body">
+    <div class="col d-flex justify-content-center align-items-center">
+      <router-outlet></router-outlet>
     </div>
   </div>
-  <div class="row">
+  <div class="row header-footer-align">
     <div class="col">
-      <app-footer class="page-footer"></app-footer>
+      <app-footer></app-footer>
     </div>
   </div>
 </div>

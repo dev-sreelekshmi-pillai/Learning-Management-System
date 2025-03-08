@@ -1,36 +1,30 @@
 <div class="signup-wrapper">
   <div class="form-set">
     <h3 class="mb-4">Sign up and start learning</h3>
-    <form action="">
+    <form #signUpForm="ngForm" (ngSubmit)="onSignUp(signUpForm)">
       <div class="form-floating mb-3">
-        <input
-          type="text"
-          name="name"
-          id="name"
-          class="form-control"
-          placeholder="name@example.com"
-        />
+        <input type="text" name="name" id="name" class="form-control" placeholder="name" ngModel required
+          #name="ngModel" />
         <label for="name">Full Name</label>
+        @if (name.touched && name.dirty && name.invalid) {
+        <p class="text-danger">Please enter your name</p>
+        }
       </div>
       <div class="form-floating mb-3">
-        <input
-          type="email"
-          name="email-id"
-          id="emailId"
-          class="form-control"
-          placeholder="name@example.com"
-        />
+        <input type="email" name="emailId" id="emailId" class="form-control" placeholder="name@example.com" ngModel
+          required #emailId="ngModel" />
         <label for="emailId">Email Address</label>
+        @if (emailId.touched && emailId.dirty && emailId.invalid) {
+        <p class="text-danger">Invalid Email</p>
+        }
       </div>
       <div class="form-floating mb-3">
-        <input
-          type="password"
-          name="password"
-          id="password"
-          class="form-control"
-          placeholder="name@example.com"
-        />
-        <label for="name">Password</label>
+        <input type="password" name="password" id="password" class="form-control" placeholder="name@example.com" ngModel
+          #password="ngModel" required minlength="6" maxlength="12" />
+        <label for="name" class="form-label">Password</label>
+        @if (password.touched && password.dirty && password.invalid) {
+        <p class="text-danger">Invalid Password</p>
+        }
       </div>
 
       <div>
@@ -38,18 +32,12 @@
       </div>
     </form>
     <p>
-      <small
-        >By signing up, you agree to our Terms of Use and Privacy Policy.</small
-      >
+      <small>By signing up, you agree to our Terms of Use and Privacy Policy.</small>
     </p>
     <div class="arrange">
       <p>
         Already have an account?
-        <a
-          routerLink="/login"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          ><strong>Log in</strong>
+        <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page"><strong>Log in</strong>
         </a>
       </p>
     </div>
