@@ -8,6 +8,11 @@
     align-items: center;
 }
 
+.footer-image-align {
+    display: flex;
+    align-items: center;
+}
+
 .footer-list-items {
     list-style: none;
     display: flex;
@@ -25,4 +30,28 @@ a:hover {
     color: #4A90E2;
 }
 
-@media screen and (max-width:650px) {}
+@media screen and (max-width:650px) {
+    .footer-items {
+        display: block;
+        align-items: center;
+    }
+
+    .footer-image-align {
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon-style {
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .footer-image-align {
+        font-size: 11px;
+    }
+
+    .footer-list-items {
+        padding-inline-start: 0px;
+    }
+}
