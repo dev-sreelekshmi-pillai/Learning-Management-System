@@ -14,30 +14,16 @@
         <label for="emailId">Email Address</label>
       </div> -->
       <div class="form-floating mb-3">
-        <input
-          type="name"
-          name="userName"
-          id="userName"
-          class="form-control"
-          placeholder="name"
-          formControlName="userName"
-          required
-        />
+        <input type="name" name="userName" id="userName" class="form-control" placeholder="name"
+          formControlName="userName" required />
         <label for="userName">User Name</label>
       </div>
       @if (userNameInvalid) {
       <p class="control-error">Username must not be empty</p>
       }
       <div class="form-floating mb-3">
-        <input
-          type="password"
-          name="password"
-          id="password"
-          class="form-control"
-          placeholder="name@example.com"
-          formControlName="password"
-          required
-        />
+        <input type="password" name="password" id="password" class="form-control" placeholder="name@example.com"
+          formControlName="password" required />
         <label for="name">Password</label>
         @if (passwordInvalid) {
         <p class="control-error">
@@ -47,11 +33,7 @@
       </div>
 
       <div>
-        <button
-          type="submit"
-          [disabled]="!loginForm.valid"
-          class="btn sign-btn"
-        >
+        <button type="submit" [disabled]="!loginForm.valid" class="btn sign-btn">
           Log in
         </button>
       </div>
@@ -65,12 +47,7 @@
     <div class="arrange">
       <p>
         Don't have an account?
-        <a
-          routerLink="/register"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          ><strong>Sign up</strong></a
-        >
+        <a routerLink="/register" routerLinkActive="active" ariaCurrentWhenActive="page"><strong>Sign up</strong></a>
       </p>
     </div>
   </div>
