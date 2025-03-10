@@ -1,1 +1,106 @@
-.course-group {}
+.course-group {
+    color: #2C3E50;
+    margin: 0px 1rem;
+}
+
+.column-card {
+    justify-items: center;
+}
+
+.card-styling {
+    height: 25rem;
+    width: 20rem;
+    margin-top: 3rem;
+    padding: 1rem 1rem 0;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.card-image {
+    height: 8rem;
+    object-fit: cover;
+}
+
+.card-body {
+    min-height: 6rem;
+    max-height: 12rem;
+    overflow: hidden;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.card-title {
+    overflow: hidden;
+    height: 2.5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-load {
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #4A90E2;
+    border-color: #4a91e2a1;
+}
+
+.btn-load:hover {
+    color: #FFFFFF;
+    background-color: #105bb1;
+    border-color: #5f84aeef;
+}
+
+.btn-load:focus {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-load:active {
+    color: #FFFFFF;
+    background-color: #105bb1;
+    border-color: #5f84aeef;
+}
+
+.btn-video {}
+
+.btn-margin-card {
+    margin-right: 1rem
+}
+
+.btn-margin-load {
+    margin: 15px;
+}
+
+.btn-enroll {
+
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #7B8D93;
+    border-color: #7B8D93;
+}
+
+.btn-enroll:hover {
+    color: #FFFFFF;
+    background-color: #56757f;
+    border-color: #598493;
+}
+
+.btn-enroll:focus {
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 1);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5)
+}
+
+.btn-enroll:active {
+    color: #FFFFFF;
+    background-color: #56757f;
+    border-color: #598493;
+}

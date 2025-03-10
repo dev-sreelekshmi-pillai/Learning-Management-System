@@ -1,33 +1,47 @@
 <div class="course-group">
-  <h3>Course /Category title</h3>
+  <h3 #topOfPage>Course /Category title</h3>
   <div>
     "" Filter,sorting setup(category,duration),language,price,level,subcategory,
     total number of results ""
   </div>
   <section>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-      @for (course of courseList; track course.courseId ) {
-      <div class="card-styling col mb-3">
-        <div class="card card-styling">
-          <img [src]="course.thumbnailUrl" class="card-img-top" alt="Image of course" />
-          <div class="card-img-overlay">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3  row-cols-xxl-4 g-4">
+      @for (course of courseList.slice(0, displayedCourses); track course.courseId) {
+      <div class="col mb-3 column-card">
+        <div class="card card-styling " [routerLink]="['/home']">
+          <img [src]="course.thumbnailUrl" class="card-img-top card-image"
+            (error)="course.thumbnailUrl='./assets/bg-image.jpg'" alt="Image of course" />
+          <!-- <div class="card-img-overlay">
             <p class="card-text">
-              <!-- <small>{{ course.createdDate }}</small> -->
+              <small>{{ course.createdDate }}</small>
+            </p>
+          </div> -->
+          <div class="card-body">
+            <h5 class="card-title" [title]="course.courseName">{{ course.courseName }}</h5>
+            <p class="card-text" [title]="course.courseDescription">
+              <!-- {{ course.courseDescription | slice : 0 : 80 }} ... -->
+              {{ course.courseDescription}}
             </p>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">{{ course.courseName }}</h5>
-            <p class="card-text" [title]="course.courseDescription">
-              {{ course.courseDescription | slice : 0 : 80 }} ...
-            </p>
+          <div class="card-footer">
+            <button type="button" class="btn btn-load btn-margin-card" (click)="openVideos(course,$event)">View
+              Videos</button>
+            <button type="button" class="btn btn-enroll " (click)="enrollToCourse()">Enroll</button>
           </div>
         </div>
       </div>
       }
     </div>
-    @if (courseList.length>4) {
-    <button type="button">Show 4 cources</button>
-    <button type="button">View All</button>
+    @if (courseList.length>displayedCourses) {
+    <button type="button" class="btn btn-load btn-margin-load" (click)="loadmore(displayedCourses)">Load More
+    </button>
+    <button type="button" class="btn btn-load btn-margin-load" (click)="loadmore(courseList.length)">View All</button>
     }
+    @if (courseList.length <= displayedCourses) { <button type="button" class="btn btn-load btn-margin-load"
+      (click)="scrollToTop()"> Back to Top
+      </button>
+      }
   </section>
 </div>
+<!-- Modal Component -->
+<app-modal [videoInput]="video" (closeModalEvent)="closeModal()"></app-modal>

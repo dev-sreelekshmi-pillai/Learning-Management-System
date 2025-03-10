@@ -51,6 +51,7 @@ a:hover {
 }
 
 .offcanvas {
+    width: 17rem;
     color: #FFFFFF !important;
     background-color: #2C3E50;
 }
